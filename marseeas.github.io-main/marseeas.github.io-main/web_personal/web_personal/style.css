@@ -1,0 +1,207 @@
+@font-face {
+  font-family: "Affogato";
+  src: url("../fonts/AffogatoRegular.ttf") format("truetype");
+}
+
+body {
+  font-family: Affogato, sans-serif;
+  background-image: url("/img/gradient_background.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.page {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+header {
+  background-attachment: fixed;
+  background: linear-gradient(160deg, #ffffff, #fcd4e0);
+  padding: 10px 0;
+  position: sticky;
+  border-radius: 16px;
+  filter: drop-shadow(-10px 0 25px #ffffff80) drop-shadow(10px 0 25px #fcd4e0); /* poner una sombra degradada es bien difícil carajo */
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin-right: 2rem;
+  display: flex;
+  gap: 3rem;
+  justify-content: flex-end;
+}
+
+ul li:first-child {
+  margin-right: auto;
+  margin-left: 2rem;
+}
+
+ul li a {
+  color: whitesmoke;
+  font-size: 0.8rem;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: default;
+}
+
+ul li a.mg {
+  color: #ee9bd3;
+}
+
+ul li a.active {
+  color: #ee9bd3;
+}
+
+#zoom-cajaizquierda,
+#zoom-cajaderecha {
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.contenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #ffffff;
+  margin-top: 4rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2rem;
+  border-radius: 16px;
+  max-width: 1200px;
+  box-shadow: 0 0 10px #ffffff;
+}
+
+.cajas {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 2rem;
+  background-image: linear-gradient(135deg, #ffffc0, #ffd4db, #ffc0ed, #d5ebff);
+  box-shadow: 0px 0px 10px #00000018;
+  padding: 2rem 5rem 2rem 3rem;
+  border-radius: 20px;
+  width: 80%;
+  max-width: 1000px;
+  margin: 0 auto;
+  align-self: center;
+}
+
+.caja {
+  background-color: #ffffff;
+  border-radius: 10px 60px 30px;
+  padding: 2.5rem;
+  box-shadow: 0px 0px 10px #ffffff;
+  transition: transform 0.3s ease;
+}
+
+.cajaizquierda,
+.cajaderecha {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: left;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 10px 60px 30px;
+  box-shadow: 0px 0px 10px #ffffff;
+  transition: transform 0.3s ease;
+}
+
+.zoom {
+  transform: scale(0.8);
+}
+
+.apps-list {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 12px 16px;
+  box-shadow: 4px 4px 20px 10px #ffffff79;
+  z-index: 1000;
+  width: max-content;
+  max-width: 300px;
+  color: #333;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.apps {
+  color: #c5195e;
+  text-decoration: underline;
+  cursor: pointer;
+  position: relative;
+}
+
+/* Momento en el que casi se me cae un ojo codeando */
+footer {
+  background-attachment: fixed;
+  background: linear-gradient(160deg, #fcd4e0, #ffffff);
+  padding: 10px 50px 10px 10px;
+  margin-top: 4rem;
+  border-radius: 16px;
+  width: 100%;
+  filter: drop-shadow(-10px 0 25px #ffffff80) drop-shadow(10px 0 25px #fcd4e0);
+}
+
+.final {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.snk {
+  display: block;
+}
+
+.contacto {
+  color: #ee9bd3;
+}
+/*Pero quedó :b*/
+
+.cajas.centrada {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(135deg, #ffffc0, #ffd4db, #ffc0ed, #d5ebff);
+  box-shadow: 0px 0px 10px #00000018;
+  padding: 3rem;
+  border-radius: 20px;
+  width: 80%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.caja-botones {
+  display: flex;
+  flex-direction: row;
+  gap: 4rem;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0px 0px 10px #ffffff;
+  width: 100%;
+  max-height: 300px;
+}
+
+.figma,
+.ibis {
+  color: black;
+}
